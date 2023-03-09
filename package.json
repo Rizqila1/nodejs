@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "9.6.0",
+  "description": "Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rizqila1/rizqila-nodejs.git"
+  },
+  "author": "Rizqila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rizqila1/rizqila-nodejs/issues"
+  },
+  "homepage": "https://github.com/Rizqila1/rizqila-nodejs#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
