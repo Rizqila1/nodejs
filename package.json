@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/Rizqila1/rizqila-nodejs#readme",
   "dependencies": {
-    "moment": "^2.29.4"
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
