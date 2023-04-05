@@ -2,37 +2,53 @@
 // const http = require("http"); ROUTING NODE JS
 // const moment = require('moment/moment'); // ROUTING MURNI NODE JS
 // const formidable = require('express-formidable');
-// const multer  = require('multer')
-// const upload = multer({dest: 'uploads'})
-const express = require('express');
-const router = require('./router');
-const PORT = 2000
 
+const express = require('express');
+const logger = require('morgan');
+const PORT = 2001;
 const app = express();
+const cors = require('cors');
+const router = require('./routers/router');
+
+
+app.use(cors());
+app.use(logger('dev'));
 app.use(express.urlencoded({extended: true}));
-app.use(express.urlencoded());
 app.use(express.json());
-app.use(router);
+
+app.get("/api/v2", (req, res) => {  
+    res.send({
+        message: "API V2"
+    })
+})
+
+app.use("/api/v2", router);
+app.use("api/v2/image/", express.static('/public'));
 
 // SET NOT FOUND
-app.use((req, res, next) => {
-    res.status(404);
-    res.send({
-        status: 'Error',
-        message: `404 ${req.originalUrl} is Not Found`,
-    });
-});
-
-app.listen(PORT, () => console.log('Server running at localhost:2000'));
-
-
-// upload file using Multer library
-// app.post('/cover', upload.single('image'), function (req, res, next) {          
-//     const {name, age, address, gender} = req.body;
-//     const image = req.file;
-
-//     res.json({name, age, address, gender, image});
+// app.use((req, res, next) => {
+//     res.status(404);
+//     res.send({
+//         status: 'Error',
+//         message: `404 ${req.originalUrl} is Not Found`,
+//     });
 // });
+
+app.listen(PORT, () => console.log('Server running at localhost:2001'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -19,10 +19,16 @@
   "homepage": "https://github.com/Rizqila1/rizqila-nodejs#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-formidable": "^1.2.0",
+    "express-logger": "0.0.3",
     "moment": "^2.29.4",
-    "multer": "^1.4.5-lts.1"
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
